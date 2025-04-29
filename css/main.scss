@@ -1,0 +1,416 @@
+$theme: #c7a73c;
+$white: #fffbee;
+$dark: #454241;
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --bg: #fff8e0;
+  background: var(--bg);
+  line-height: 1.5;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+button,
+body {
+  font-family: "Playfair Display", sans-serif;
+}
+
+a{
+    color: inherit;
+    &:focus-visible{
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+div.clear{
+    clear: both;
+}
+
+.center {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.button {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: $white;
+    padding: 0.75em 1.5em;
+    border: none;
+    background-color: $theme;
+    font-weight: bold;
+    transition: filter 0.1s ease;
+    display: inline-block;
+    text-decoration: none;
+
+    &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 4px var(--bg), 0 0 0 8px $theme;
+    }
+    &:hover{
+        cursor: pointer;
+        filter: saturate(70%);
+    }
+    &.b2{
+        background: transparent;
+        color: $theme;
+        border: .2rem solid $theme;
+        font-size: 1.3rem;
+    }
+    &:disabled{
+        opacity: 0.4;
+    }
+}
+
+.message{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+#header {
+  position: relative;
+  z-index: 10;
+  padding: 4rem;
+  .title {
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin: 0;
+    font-family: "WindSong", cursive;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4rem;
+    a{
+        text-decoration: none;  
+    }
+  }
+  nav {
+    display: inline-block;
+    vertical-align: middle;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: inherit;
+        margin-right: 1rem;
+
+        &:hover,
+        &:focus-visible {
+          text-decoration: underline;
+          outline: none;
+        }
+      }
+    }
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+main > section {
+  h2 {
+    font-size: 2.5rem;
+  }
+  h4 {
+    font-size: 1.2em;
+  }
+  font-size: 1.5rem;
+}
+
+.title {
+    .center {
+        padding: 2rem;
+        padding-bottom: 6rem;
+        position: relative;
+      .image{
+          background-image: url("../img/mona-transparent.jpeg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position-x: center;
+          position: absolute;
+          bottom: 2rem;
+          right: 0px;
+          width: 450px;
+          height: 600px;
+          opacity: 1;
+          filter: brightness(105%);
+          box-shadow: 1rem -1rem $theme;
+      }
+    h2 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    h2, p{
+      text-shadow: 2px 2px 2px var(--bg), -2px -2px 2px var(--bg), -2px 2px 2px var(--bg), 2px -2px 2px var(--bg);
+    }
+    p {
+      font-size: 2rem;
+    }
+    .left {
+      width: 60%;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.about {
+  border-top: 0.5rem solid $theme;
+//   border-bottom: 0.5rem solid $theme;
+  background: $dark;
+  --bg: #{$dark};
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+  color: $white;
+  .center {
+
+    img{
+        float: left;
+        height: 400px;
+        margin-right: 4rem;
+        box-shadow: .5rem .5rem $theme;
+    }
+    padding: 2rem;
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.video{
+    margin: 6rem 0;
+    .center{
+        padding: 0 1rem;
+        text-align: center;
+        video{
+            box-shadow: -1rem -1rem $theme;
+            border: none;
+            background: black;
+            width: 640px;
+            max-width: 100%;
+            height: 360px;
+            &:focus-visible, &:focus{
+                outline: none;
+            }
+        }
+    }
+}
+
+.topics {
+  .center {
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .topics-container {
+    section {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      padding-bottom: 1rem;
+    }
+    section:nth-of-type(odd){
+        padding-right: 1rem;
+    }
+    section:nth-of-type(even){
+        padding-left: 1rem;
+    }
+    q {
+      font-size: 0.8em;
+      font-style: italic;
+    }
+  }
+}
+
+.contact {
+  img{
+    width: 400px;
+    float: right;
+    box-shadow: 1rem -1rem $theme;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    transform: scaleX(-1);
+  }
+  background: $white;
+  .center {
+    padding: 8rem 2rem;
+  }
+  form{
+    input, textarea{
+        display: block;
+        font-size: inherit;
+        border: 2px solid $theme;
+        padding: .5rem 1rem;
+        background: none;
+        font-family: inherit;
+        max-width: 100%;
+        border-radius: 0;
+
+        &:focus, &:focus-visible{
+            outline: none;
+            box-shadow: 0 0 0 4px $white, 0 0 0 8px $theme;
+        }
+    }
+    button{
+        display: block;
+        margin-top: 1rem;
+    }
+    label{
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+        font-size: 1.2em;
+    }
+  }
+}
+
+.content{
+    .center{
+        padding: 0 2rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
+}
+
+#footer {
+  padding: 2rem;
+  border-top: 2px solid #0002;
+  font-size: 1.3rem;
+  background: $white;
+
+  p {
+    margin: 0;
+  }
+  p:first-child{
+    font-weight: bold;
+  }
+  .credit {
+    color: #0008;
+    a {
+      color: #333;
+      &:hover, &:focus-visible{
+        outline: none;
+        color: black;
+      }
+    }
+  }
+}
+
+.page-about{
+ h2{
+  margin-top: 4rem;
+ }
+ h1{
+  font-size: 3rem;
+  margin-bottom: 2rem; 
+  }
+}
+.about-family img {
+  float: left;
+  width: 40%;
+  margin-right: 2rem;
+  box-shadow: -1rem -1rem $theme;
+}
+
+.about-children img {
+  float: right;
+  width: 40%;
+  margin-left: 2rem;
+  box-shadow: 1rem -1rem $theme;
+}
+
+@media screen and (max-width: 1350px) {
+  .title .center .image {
+    height: 550px;
+    width: 350px;
+    right: 3rem;
+    bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-family img, .about-children img {
+      float: none;
+      width: 400px;
+      margin: none;
+      margin-top: 2rem;
+    }
+    .about img{
+      height: auto !important;
+      width: 400px;
+    }
+    .title .center .left{
+        width: 100%;
+    }
+    .title .center .image{
+        display: none;
+    }
+    #header {
+        padding: 2rem;
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+    .topics .topics-container section{
+        width: 100%;
+        padding: 0 !important;
+    }
+    body section .center .img-float{
+        float: none;
+        // display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .title .center .left{
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    #header{
+        h1{
+            display: block;
+            text-align: center;
+        }
+        nav{
+            display: block;
+        }
+    }
+}

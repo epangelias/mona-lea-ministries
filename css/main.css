@@ -1,0 +1,387 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --bg: #fff8e0;
+  background: var(--bg);
+  line-height: 1.5;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+body {
+  font-family: "Playfair Display", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+a:focus-visible {
+  outline: none;
+  text-decoration: none;
+}
+
+div.clear {
+  clear: both;
+}
+
+.center {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.button {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fffbee;
+  padding: 0.75em 1.5em;
+  border: none;
+  background-color: #c7a73c;
+  font-weight: bold;
+  transition: filter 0.1s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 8px #c7a73c;
+}
+.button:hover {
+  cursor: pointer;
+  filter: saturate(70%);
+}
+.button.b2 {
+  background: transparent;
+  color: #c7a73c;
+  border: 0.2rem solid #c7a73c;
+  font-size: 1.3rem;
+}
+.button:disabled {
+  opacity: 0.4;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+#header {
+  position: relative;
+  z-index: 10;
+  padding: 4rem;
+}
+#header .title {
+  font-weight: bold;
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: "WindSong", cursive;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4rem;
+}
+#header .title a {
+  text-decoration: none;
+}
+#header nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+#header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+#header nav ul a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: inherit;
+  margin-right: 1rem;
+}
+#header nav ul a:hover, #header nav ul a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+#header nav li {
+  display: inline-block;
+}
+
+main > section {
+  font-size: 1.5rem;
+}
+main > section h2 {
+  font-size: 2.5rem;
+}
+main > section h4 {
+  font-size: 1.2em;
+}
+
+.title .center {
+  padding: 2rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+.title .center .image {
+  background-image: url("../img/mona-transparent.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  position: absolute;
+  bottom: 2rem;
+  right: 0px;
+  width: 450px;
+  height: 600px;
+  opacity: 1;
+  filter: brightness(105%);
+  box-shadow: 1rem -1rem #c7a73c;
+}
+.title .center h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.title .center h2, .title .center p {
+  text-shadow: 2px 2px 2px var(--bg), -2px -2px 2px var(--bg), -2px 2px 2px var(--bg), 2px -2px 2px var(--bg);
+}
+.title .center p {
+  font-size: 2rem;
+}
+.title .center .left {
+  width: 60%;
+  position: relative;
+  z-index: 2;
+}
+
+.about {
+  border-top: 0.5rem solid #c7a73c;
+  background: #454241;
+  --bg: #454241;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+  color: #fffbee;
+}
+.about .center {
+  padding: 2rem;
+}
+.about .center img {
+  float: left;
+  height: 400px;
+  margin-right: 4rem;
+  box-shadow: 0.5rem 0.5rem #c7a73c;
+}
+.about .center p {
+  font-size: 1.5rem;
+}
+
+.video {
+  margin: 6rem 0;
+}
+.video .center {
+  padding: 0 1rem;
+  text-align: center;
+}
+.video .center video {
+  box-shadow: -1rem -1rem #c7a73c;
+  border: none;
+  background: black;
+  width: 640px;
+  max-width: 100%;
+  height: 360px;
+}
+.video .center video:focus-visible, .video .center video:focus {
+  outline: none;
+}
+
+.topics .center {
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+.topics h2 {
+  margin-bottom: 2rem;
+}
+.topics .topics-container section {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 1rem;
+}
+.topics .topics-container section:nth-of-type(odd) {
+  padding-right: 1rem;
+}
+.topics .topics-container section:nth-of-type(even) {
+  padding-left: 1rem;
+}
+.topics .topics-container q {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.contact {
+  background: #fffbee;
+}
+.contact img {
+  width: 400px;
+  float: right;
+  box-shadow: 1rem -1rem #c7a73c;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  transform: scaleX(-1);
+}
+.contact .center {
+  padding: 8rem 2rem;
+}
+.contact form input, .contact form textarea {
+  display: block;
+  font-size: inherit;
+  border: 2px solid #c7a73c;
+  padding: 0.5rem 1rem;
+  background: none;
+  font-family: inherit;
+  max-width: 100%;
+  border-radius: 0;
+}
+.contact form input:focus, .contact form input:focus-visible, .contact form textarea:focus, .contact form textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px #fffbee, 0 0 0 8px #c7a73c;
+}
+.contact form button {
+  display: block;
+  margin-top: 1rem;
+}
+.contact form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2em;
+}
+
+.content .center {
+  padding: 0 2rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+#footer {
+  padding: 2rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.1333333333);
+  font-size: 1.3rem;
+  background: #fffbee;
+}
+#footer p {
+  margin: 0;
+}
+#footer p:first-child {
+  font-weight: bold;
+}
+#footer .credit {
+  color: rgba(0, 0, 0, 0.5333333333);
+}
+#footer .credit a {
+  color: #333;
+}
+#footer .credit a:hover, #footer .credit a:focus-visible {
+  outline: none;
+  color: black;
+}
+
+.page-about h2 {
+  margin-top: 4rem;
+}
+.page-about h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.about-family img {
+  float: left;
+  width: 40%;
+  margin-right: 2rem;
+  box-shadow: -1rem -1rem #c7a73c;
+}
+
+.about-children img {
+  float: right;
+  width: 40%;
+  margin-left: 2rem;
+  box-shadow: 1rem -1rem #c7a73c;
+}
+
+@media screen and (max-width: 1350px) {
+  .title .center .image {
+    height: 550px;
+    width: 350px;
+    right: 3rem;
+    bottom: 5rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about-family img, .about-children img {
+    float: none;
+    width: 400px;
+    margin: none;
+    margin-top: 2rem;
+  }
+  .about img {
+    height: auto !important;
+    width: 400px;
+  }
+  .title .center .left {
+    width: 100%;
+  }
+  .title .center .image {
+    display: none;
+  }
+  #header {
+    padding: 2rem;
+  }
+  #header h1 {
+    font-size: 2.5rem;
+  }
+  .topics .topics-container section {
+    width: 100%;
+    padding: 0 !important;
+  }
+  body section .center .img-float {
+    float: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .title .center .left h2 {
+    font-size: 2rem;
+  }
+  .title .center .left p {
+    font-size: 1.5rem;
+  }
+  #header h1 {
+    display: block;
+    text-align: center;
+  }
+  #header nav {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
